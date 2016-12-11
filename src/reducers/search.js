@@ -1,5 +1,3 @@
-import 'whatwg-fetch';
-
 function searchResults(state = [], action) {
   switch(action.type) {
     case 'SEARCH' :

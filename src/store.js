@@ -5,12 +5,13 @@ import { browserHistory } from 'react-router';
 //import root reducer
 import rootReducer from './reducers/index';
 
-let searchTerm = null;
+let searchTerm = '';
 let searchResults = [];
-let definitions = localStorage.getItem('definitions') || [];
+let definitions = JSON.parse(localStorage.getItem('definitions')) || [];
 console.log(definitions);
 
 const initialState = {
+  searchTerm,
   searchResults,
   definitions
 };

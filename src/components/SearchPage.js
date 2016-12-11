@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import '../App.css';
-import ResultsCollection from './ResultsCollection'
+import SearchResultsCollection from './SearchResultsCollection'
 
-class Search extends Component {
+class SearchPage extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  renderSearchResults(result, i){
-    return (
-      <div key={i}>
-        <p>{result.type}</p>
-      </div>
-    )
   }
 
   handleSubmit(event){
@@ -30,19 +22,17 @@ class Search extends Component {
   }
 
   render() {
-    console.log('search:')
-    console.log(this.props.searchResults);
     return (
       <div>
-        Search!
+        SearchPage!
         <form ref="searchForm" id="search-form" onSubmit={this.handleSubmit}>
-          <input type="text" ref="word" />
+          <input type="text" ref="word" defaultValue={this.props.searchTerm}/>
           <input type="submit" hidden />
         </form>
-        <ResultsCollection searchResults = {this.props.searchResults}/>
+        <SearchResultsCollection {...this.props}/>
       </div>
     );
   }
 }
 
-export default Search;
+export default SearchPage;

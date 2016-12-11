@@ -1,10 +1,10 @@
 import React from 'react';
-import Result from './Result';
+import SearchResult from './SearchResult';
 
-const ResultsCollection = props => {
+const SearchResultsCollection = props => {
   let results = props.searchResults.map((result, index)=>{
     return (
-      <Result result={result} key={index}/>
+      <SearchResult key={index} index={index} result={result} {...props}/>
     )
   })
   return (
@@ -16,4 +16,4 @@ const ResultsCollection = props => {
   )
 }
 
-export default ResultsCollection;
+export default SearchResultsCollection;

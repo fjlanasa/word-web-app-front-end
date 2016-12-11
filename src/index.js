@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Search from './components/Search';
-import Saved from './components/Saved';
+import SearchPage from './components/SearchPage';
+import SavedPage from './components/SavedPage';
 import App from './components/App';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
@@ -12,8 +12,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path='/' component={App}>
-        <IndexRoute component={Search} />
-        <Route path='/saved' component={Saved} />
+        <IndexRoute component={SearchPage} />
+        <Route path='/saved' component={SavedPage} />
       </Route>
     </Router>
   </Provider>,

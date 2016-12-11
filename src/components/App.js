@@ -20,6 +20,7 @@ class App extends Component {
 
 let mapStateToProps = (state) => {
   return {
+    searchTerm: state.searchTerm,
     searchResults: state.searchResults,
     definitions: state.definitions
   }
