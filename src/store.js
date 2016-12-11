@@ -5,8 +5,20 @@ import { browserHistory } from 'react-router';
 //import root reducer
 import rootReducer from './reducers/index';
 
-const initialState = {};
+let searchTerm = null;
+let searchResults = [];
+let definitions = localStorage.getItem('definitions') || [];
+console.log(definitions);
 
-export default const store = createStore(rootReducer, initialState);
+const initialState = {
+  searchResults,
+  definitions
+};
 
-export const history = synchHistoryWithStore(browserHistory, store);
+console.log(initialState);
+
+const store = createStore(rootReducer, initialState);
+
+export const history = syncHistoryWithStore(browserHistory, store);
+
+export default store;

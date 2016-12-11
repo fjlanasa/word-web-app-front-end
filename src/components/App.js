@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import { Link, IndexLink } from 'react-router';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions/actionCreators';
 
 class App extends Component {
   render() {
@@ -9,10 +12,24 @@ class App extends Component {
           <li><Link to='/'>Search</Link></li>
           <li><Link to='/saved'>Saved</Link></li>
         </ul>
-        {this.props.children}
+        {React.cloneElement(this.props.children, this.props)}
       </div>
     );
   };
 }
 
-export default App;
+let mapStateToProps = (state) => {
+  return {
+    searchResults: state.searchResults,
+    definitions: state.definitions
+  }
+}
+
+let mapDispatchToProps = (dispatch) => {
+  return  bindActionCreators(actionCreators, dispatch);
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
