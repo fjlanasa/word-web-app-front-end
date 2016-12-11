@@ -8,10 +8,8 @@ const SavedDefinitionCollection = props => {
     )
   })
   return (
-    <div className='small-12 columns'>
-      <ul className="definitions">
-        {definitions}
-      </ul>
+    <div className="definitions">
+      {definitions}
     </div>
   )
 }

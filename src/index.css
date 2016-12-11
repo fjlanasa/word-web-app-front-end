@@ -2,4 +2,36 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #239DAA;
+  background: linear-gradient(to left, #239DAA , #B7DEE3);
+}
+
+ul {
+  list-style: none;
+}
+
+button.save {
+  display: none;
+}
+
+li.result:hover button.save{
+  display: inline;
+}
+
+input[type=text] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus {
+  box-shadow: 0 0 5px #78D4AE;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #78D4AE;
 }

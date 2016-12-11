@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router';
-import '../App.css';
 import SearchResultsCollection from './SearchResultsCollection'
 
 class SearchPage extends Component {

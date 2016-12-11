@@ -10,7 +10,7 @@ class App extends Component {
       <div>
         <ul>
           <li><Link to='/'>Search</Link></li>
-          <li><Link to='/saved'>Saved</Link></li>
+          <li><button className='saved-page-button'><Link to='/saved'>Saved</Link></button></li>
         </ul>
         {React.cloneElement(this.props.children, this.props)}
       </div>

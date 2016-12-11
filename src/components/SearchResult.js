@@ -12,11 +12,10 @@ class SearchResult extends Component {
   }
   render() {
     return(
-      <li className="result">
-        <div onClick={this.handleClick}>
-          {this.props.searchTerm} ({this.props.result.type}): {this.props.result.defenition}
-        </div>
-      </li>
+      <div className="result">
+        {this.props.searchTerm} ({this.props.result.type}): {this.props.result.defenition}
+        <button className="save" onClick={this.handleClick}>Save</button>
+      </div>
     );
   }
 };

@@ -8,10 +8,8 @@ const SearchResultsCollection = props => {
     )
   })
   return (
-    <div className='small-12 columns'>
-      <ul className="results">
-        {results}
-      </ul>
+    <div className="results">      
+      {results}
     </div>
   )
 }

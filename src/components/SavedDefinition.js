@@ -7,9 +7,9 @@ class SavedDefinition extends Component {
 
   render() {
     return(
-      <li className="result">
-      <div>{this.props.word} ({this.props.definition.type}): {this.props.definition.defenition}</div>
-      </li>
+      <div className="saved">
+        {this.props.word} ({this.props.definition.type}): {this.props.definition.defenition}
+      </div>
     );
   }
 };
