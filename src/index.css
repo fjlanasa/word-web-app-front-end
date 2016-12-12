@@ -1,9 +1,58 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: #239DAA;
   background: linear-gradient(to left, #239DAA , #B7DEE3);
+}
+
+#root {
+  width: 95%;
+  margin: 20px auto;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div {
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.result-content {
+  width: 80%;
+}
+
+.saved-page-button {
+  color: red;
+}
+
+.nav-button {
+  background-color: rgba(255,0,0,0);
+  border: none;
+  height: 30px;
+  width: 60px;
 }
 
 ul {
@@ -14,8 +63,18 @@ button.save {
   display: none;
 }
 
-li.result:hover button.save{
+div.result:hover button.save{
   display: inline;
+  height: 25px;
+  width: 50px;
+  background-color: #68DF91;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+form {
+  width: 100%;
 }
 
 input[type=text] {
@@ -27,11 +86,14 @@ input[type=text] {
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
 }
 
 input[type=text]:focus {
   box-shadow: 0 0 5px #78D4AE;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid #78D4AE;
+  border: 3px solid #78D4AE;
 }

@@ -8,10 +8,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ul>
-          <li><Link to='/'>Search</Link></li>
-          <li><button className='saved-page-button'><Link to='/saved'>Saved</Link></button></li>
-        </ul>
+        <div className="nav-bar">
+          <div><Link to='/'>Search</Link></div>
+          <div>
+            <Link activeClassName='saved-page-button' to='/saved'>
+              <div className='nav-button'>Saved</div>
+            </Link>
+          </div >
+        </div>
         {React.cloneElement(this.props.children, this.props)}
       </div>
     );

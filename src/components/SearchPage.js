@@ -21,8 +21,7 @@ class SearchPage extends Component {
 
   render() {
     return (
-      <div>
-        SearchPage!
+      <div className="content">
         <form ref="searchForm" id="search-form" onSubmit={this.handleSubmit}>
           <input type="text" ref="word" defaultValue={this.props.searchTerm}/>
           <input type="submit" hidden />

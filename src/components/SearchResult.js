@@ -13,7 +13,9 @@ class SearchResult extends Component {
   render() {
     return(
       <div className="result">
-        {this.props.searchTerm} ({this.props.result.type}): {this.props.result.defenition}
+        <div className="result-content">
+          {this.props.searchTerm} ({this.props.result.type}): {this.props.result.defenition}
+        </div>
         <button className="save" onClick={this.handleClick}>Save</button>
       </div>
     );

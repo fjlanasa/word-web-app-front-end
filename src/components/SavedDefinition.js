@@ -7,7 +7,7 @@ class SavedDefinition extends Component {
 
   render() {
     return(
-      <div className="saved">
+      <div className="result">
         {this.props.word} ({this.props.definition.type}): {this.props.definition.defenition}
       </div>
     );

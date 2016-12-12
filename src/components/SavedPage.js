@@ -4,7 +4,7 @@ import SavedDefinitionCollection from './SavedDefinitionCollection'
 class SavedPage extends Component {
   render () {
     return (
-      <div>
+      <div className="content">
         <SavedDefinitionCollection {...this.props} />
       </div>
     );
