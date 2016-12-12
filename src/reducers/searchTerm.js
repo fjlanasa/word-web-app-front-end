@@ -1,8 +1,7 @@
 function searchTerm(state = '', action) {
   switch(action.type) {
     case 'SEARCH' :
-        return action.word
-        break;
+        return action.word;
     default:
       return state;
   }

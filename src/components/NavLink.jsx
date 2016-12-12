@@ -7,7 +7,7 @@ class NavLink extends Component {
   }
   render() {
     let isActive = this.context.router.isActive(this.props.to, true);
-    let className = isActive ? "active saved-link": "saved-link";
+    let className = isActive ? 'active saved-link': 'saved-link';
 
     return (
       <div className={className}>

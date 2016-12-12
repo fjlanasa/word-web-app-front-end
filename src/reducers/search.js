@@ -1,8 +1,7 @@
 function searchResults(state = [], action) {
   switch(action.type) {
     case 'SEARCH' :
-        return action.body
-        break;
+        return action.body;
     default:
       return state;
   }

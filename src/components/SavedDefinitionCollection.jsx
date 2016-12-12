@@ -8,7 +8,7 @@ function SavedDefinitionCollection(props) {
     )
   })
   return (
-    <div className="definitions">
+    <div className='definitions'>
       {definitions}
     </div>
   )

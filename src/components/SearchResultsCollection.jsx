@@ -8,7 +8,7 @@ function SearchResultsCollection(props) {
     )
   })
   return (
-    <div className="results">
+    <div className='results'>
       {results}
     </div>
   )

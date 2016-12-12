@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="nav-bar">
+        <div className='nav-bar'>
           <div><Link className='logo' to='/'>Words</Link></div>
           <div>
             <NavLink to='/saved'>

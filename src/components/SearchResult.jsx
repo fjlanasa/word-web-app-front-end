@@ -11,11 +11,11 @@ class SearchResult extends Component {
   }
   render() {
     return(
-      <div className="result">
-        <div className="result-content">
-          <span className="type">{this.props.result.type}</span> - {this.props.result.defenition}
+      <div className='result'>
+        <div className='result-content'>
+          <span className='type'>{this.props.result.type}</span> - {this.props.result.defenition}
         </div>
-        <button className="save" onClick={this.handleClick}>Save</button>
+        <button className='save' onClick={this.handleClick}>Save</button>
       </div>
     );
   }

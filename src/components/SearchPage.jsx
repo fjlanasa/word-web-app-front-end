@@ -21,10 +21,10 @@ class SearchPage extends Component {
 
   render() {
     return (
-      <div className="search">
-        <form ref="searchForm" id="search-form" onSubmit={this.handleSubmit}>
-          <input type="text" ref="word" defaultValue={this.props.searchTerm} placeholder="Search for Word"/>
-          <input type="submit" hidden />
+      <div className='search'>
+        <form ref='searchForm' id='search-form' onSubmit={this.handleSubmit}>
+          <input type='text' ref='word' defaultValue={this.props.searchTerm} placeholder='Search for Word'/>
+          <input type='submit' hidden />
         </form>
         <SearchResultsCollection {...this.props}/>
       </div>
