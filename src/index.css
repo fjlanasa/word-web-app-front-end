@@ -2,12 +2,21 @@ html {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   background-color: #239DAA;
   background: linear-gradient(to left, #239DAA , #B7DEE3);
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 #root {
@@ -21,13 +30,31 @@ body {
   justify-content: space-between;
 }
 
+.saved-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 70px;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: #69B1BA;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  color: black;
+  font-size: 1.5em;
+}
+
 div {
   height: 100%;
 }
 
 .content {
   height: 100%;
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,28 +63,39 @@ div {
 
 .result {
   display: flex;
-  justify-content: space-between;
+  min-height: 31px;
   margin: 30px auto;
+  justify-content: space-between;
 }
 
 .result-content {
   width: 80%;
 }
 
-.saved-page-button {
-  color: red;
+.search {
+  width: 95%;
+  margin: auto;
+
 }
 
-.nav-button {
-  background-color: rgba(255,0,0,0);
-  border: none;
-  height: 30px;
-  width: 60px;
+.saved-heading {
+  font-weight: 100;
 }
 
-ul {
-  list-style: none;
+hr {
+  border: solid 1px black;
+  width: 65%;
 }
+
+.word {
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+span.type {
+  font-weight: bold;
+}
+
 
 button.save {
   display: none;
@@ -65,8 +103,8 @@ button.save {
 
 div.result:hover button.save{
   display: inline;
-  height: 25px;
-  width: 50px;
+  height: 30px;
+  width: 60px;
   background-color: #68DF91;
   color: white;
   border: none;
@@ -87,8 +125,11 @@ input[type=text] {
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
   border-radius: 5px;
+  height: 30px;
   width: 100%;
   text-align: center;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 input[type=text]:focus {
@@ -96,4 +137,20 @@ input[type=text]:focus {
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 3px solid #78D4AE;
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder {
+   color: black;
+}
+
+::-moz-placeholder {
+   color: black;
+}
+
+:-ms-input-placeholder {
+   color: black;
 }

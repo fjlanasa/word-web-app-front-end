@@ -8,7 +8,11 @@ class SavedDefinition extends Component {
   render() {
     return(
       <div className="result">
-        {this.props.word} ({this.props.definition.type}): {this.props.definition.defenition}
+        <div className="word"><div>{this.props.word}</div></div>
+        <div className="result-content">
+          <span className="type">({this.props.definition.type}) -</span>
+          {this.props.definition.defenition}
+        </div>
       </div>
     );
   }

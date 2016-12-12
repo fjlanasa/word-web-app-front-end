@@ -7,6 +7,8 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 import './index.css';
+import './medium.css';
+import './large.css';
 
 ReactDOM.render(
   <Provider store={store}>

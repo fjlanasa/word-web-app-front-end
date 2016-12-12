@@ -3,17 +3,18 @@ import { Link, IndexLink } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
+import NavLink from './NavLink';
 
 class App extends Component {
   render() {
     return (
       <div>
         <div className="nav-bar">
-          <div><Link to='/'>Search</Link></div>
+          <div><Link className='logo' to='/'>Words</Link></div>
           <div>
-            <Link activeClassName='saved-page-button' to='/saved'>
-              <div className='nav-button'>Saved</div>
-            </Link>
+            <NavLink to='/saved'>
+              Saved
+            </NavLink>
           </div >
         </div>
         {React.cloneElement(this.props.children, this.props)}

@@ -7,14 +7,13 @@ class SearchResult extends Component {
   }
 
   handleClick(){
-    debugger;
     this.props.save(this.props.searchTerm, this.props.result)
   }
   render() {
     return(
       <div className="result">
         <div className="result-content">
-          {this.props.searchTerm} ({this.props.result.type}): {this.props.result.defenition}
+          <span className="type">{this.props.result.type}</span> - {this.props.result.defenition}
         </div>
         <button className="save" onClick={this.handleClick}>Save</button>
       </div>
