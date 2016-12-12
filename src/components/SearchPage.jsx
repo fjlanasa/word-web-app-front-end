@@ -9,7 +9,7 @@ class SearchPage extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    let word = this.refs.word.value;
+    let word = this.refs.word.value.toLowerCase();
     fetch(`https://owlbot.info/api/v1/dictionary/${word}?format=json`)
       .then(response => response.json())
       .then(body => {
@@ -24,7 +24,7 @@ class SearchPage extends Component {
       <div className='search'>
         <form ref='searchForm' id='search-form' onSubmit={this.handleSubmit}>
           <input type='text' ref='word' defaultValue={this.props.searchTerm} placeholder='Search for Word'/>
-          <input type='submit' hidden />
+          <input className='save submit' type='submit'/>
         </form>
         <SearchResultsCollection {...this.props}/>
       </div>

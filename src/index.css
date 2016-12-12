@@ -97,11 +97,7 @@ span.type {
 }
 
 
-button.save {
-  display: none;
-}
-
-div.result:hover button.save{
+.save {
   display: inline;
   height: 30px;
   width: 60px;
@@ -111,8 +107,24 @@ div.result:hover button.save{
   border-radius: 2px;
 }
 
+
+
+/*div.result:hover button.save{
+  display: inline;
+  height: 30px;
+  width: 60px;
+  background-color: #68DF91;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}*/
+
 form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
 }
 
 input[type=text] {

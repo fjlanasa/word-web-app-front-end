@@ -19,4 +19,22 @@
   .word {
     font-size: 1.25em;
   }
+
+  .submit {
+    margin-left: -9999px;
+  }
+
+  button.save {
+    display: none;
+  }
+
+  div.result:hover button.save{
+    display: inline;
+    height: 30px;
+    width: 60px;
+    background-color: #68DF91;
+    color: white;
+    border: none;
+    border-radius: 2px;
+  }
 }
