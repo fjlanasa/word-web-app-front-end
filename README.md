@@ -27,10 +27,14 @@ npm install
 npm start
 
 open http://localhost:3000  # Make sure back-end is running on port 4567
-
 ```
 
 If you are using Chrome, I would recommend installing the [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Redux Dev Tools](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi2gLnI_vHQAhXGbxQKHVSMDZ0QFggaMAA&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fredux-devtools%2Flmhkpmbekcpmknklioeibfkpmmfibljd%3Fhl%3Den&usg=AFQjCNFg4ldS78uapjCGBaNjL9NvIwZGhg&sig2=BXqmjtkDSQMK4Fr_HggYPg&bvm=bv.141320020,d.cGc).
+
+### Notable Features:
+  * In the [SearchPage](/src/components/SearchPage.jsx) component, added some logic to render a loading animation on the initial search (which could be a bit slow), as well as a message when a search returns no results.
+  * Added a 404 Not Found page using a [catch-all route](./index.js).
+  * Set up [programmatic navigation](/src/components/SearchResult.jsx) to SavedPage after clicking to save a definition.
 
 ### Questions:
 1. I ended up using Redux to manage application state, mostly because I've been wanting to try it out. In reality, it's probably not worth the time it takes to set up Redux to manage three pieces of state, and I would probably stick to using only React if I were building something of this scale in the real world.
