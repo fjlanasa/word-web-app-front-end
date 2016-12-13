@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import SearchResultsCollection from './SearchResultsCollection'
+import $ from 'jquery';
 
 class SearchPage extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.jsonpCallback = this.jsonpCallback.bind(this);
+  }
+
+  myCallback(){
+    debugger;
   }
 
   handleSubmit(event){
     event.preventDefault();
     let word = this.refs.word.value.toLowerCase();
-    fetch(`https://owlbot.info/api/v1/dictionary/${word}?format=json`)
-      .then(response => response.json())
-      .then(body => {
-        this.props.search(word, body);
-      })
-      .catch(error => console.error(`Error in fetch: ${error.message}`)
-    );
+    let url = `http://localhost:4567/${word}`
+    $.ajax({
+      url: url,
+      contentType: 'application/json'
+    }).done((data) => {
+      this.props.search(word, data)
+    })
   }
 
   render() {

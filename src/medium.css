@@ -20,10 +20,6 @@
     font-size: 1.25em;
   }
 
-  .submit {
-    margin-left: -9999px;
-  }
-
   button.save {
     display: none;
   }

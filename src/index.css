@@ -107,7 +107,9 @@ span.type {
   border-radius: 2px;
 }
 
-
+.submit {
+  margin-left: -9999px;
+}
 
 /*div.result:hover button.save{
   display: inline;
