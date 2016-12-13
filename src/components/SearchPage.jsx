@@ -6,17 +6,12 @@ class SearchPage extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.jsonpCallback = this.jsonpCallback.bind(this);
-  }
-
-  myCallback(){
-    debugger;
   }
 
   handleSubmit(event){
     event.preventDefault();
     let word = this.refs.word.value.toLowerCase();
-    let url = `http://localhost:4567/${word}`
+    let url = `word-web-app-backend.herokuapp/${word}`
     $.ajax({
       url: url,
       contentType: 'application/json'
