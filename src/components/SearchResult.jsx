@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { browserHistory } from 'react-router';
 
 class SearchResult extends Component {
   constructor(props){
@@ -7,7 +8,8 @@ class SearchResult extends Component {
   }
 
   handleClick(){
-    this.props.save(this.props.searchTerm, this.props.result)
+    this.props.save(this.props.searchTerm, this.props.result);
+    browserHistory.push('/saved');
   }
   render() {
     return(

@@ -3,7 +3,7 @@ function definitions(state=[], action) {
     case 'SAVE':
       let definition = {word: action.word,
                         definition: action.definition};
-      let newState = [...state, definition]
+      let newState = [definition, ...state]
       let jsonNewState = JSON.stringify(newState);
       localStorage.setItem('definitions', jsonNewState);
       return newState;

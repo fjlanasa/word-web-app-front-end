@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchResultsCollection from './SearchResultsCollection'
+import SearchResultsCollection from './SearchResultsCollection';
 import $ from 'jquery';
 
 class SearchPage extends Component {
