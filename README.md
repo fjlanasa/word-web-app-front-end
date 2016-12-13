@@ -33,7 +33,7 @@ If you are using Chrome, I would recommend installing the [React Dev Tools](http
 
 ### Notable Features:
   * In the [SearchPage](/src/components/SearchPage.jsx) component, added some logic to render a loading animation on the initial search (which could be a bit slow), as well as a message when a search returns no results.
-  * Added a 404 Not Found page using a [catch-all route](./index.js).
+  * Added a 404 Not Found page using a [catch-all route](/src/index.js).
   * Set up [programmatic navigation](/src/components/SearchResult.jsx) to SavedPage after clicking to save a definition.
 
 ### Questions:
