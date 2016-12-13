@@ -26,7 +26,7 @@ npm install
 
 npm start
 
-open http://localhost:3000
+open http://localhost:3000  # Make sure back-end is running on port 4567
 
 ```
 
@@ -49,4 +49,4 @@ If you are using Chrome, I would recommend installing the [React Dev Tools](http
 
 4. Immediately prior to starting this challenge, I was planning to build a simple note-taking app using a Rails API, mainly for practice using Redux, as well as to try implementing Angular. I'm definitely excited to pick that back up now that I've actually gotten my hands dirty with redux.
 
-5. I'm pretty new to the community and it's hard for me to point to a specific person who inspires me, but in general, I've found myself inspired by 'Civic Hackers' and people who give back through teaching, mentoring, etc. For example, I really loved this story in NYT Magazine about Code for America's efforts to build a user-friendly app that would increase food stamp enrollment in San Francisco. I'm definitely hoping to get involved with similar projects as I increase my skill. 
+5. I'm pretty new to the community and it's hard for me to point to a specific person who inspires me, but in general, I've found myself inspired by 'Civic Hackers' and people who give back through teaching, mentoring, etc. For example, I really loved this story in [NYT Magazine](http://www.nytimes.com/interactive/2016/11/13/magazine/design-issue-code-for-america.html?_r=0) about Code for America's efforts to build a user-friendly app that would increase food stamp enrollment in San Francisco. I'm definitely hoping to get involved with similar projects as I increase my skill.
