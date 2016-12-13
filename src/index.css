@@ -61,6 +61,10 @@ div {
   margin: auto;
 }
 
+.no-results {
+  text-align: center;
+}
+
 .result {
   display: flex;
   min-height: 31px;
