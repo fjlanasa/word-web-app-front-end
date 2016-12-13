@@ -47,7 +47,7 @@ class SearchPage extends Component {
         </form>
         {loadingAnimation}
         {noResultsText}
-        <SearchResultsCollection {...this.props}/>
+        <SearchResultsCollection {...this.props} />
       </div>
     );
   }

@@ -13,7 +13,7 @@ describe('<SearchResultsCollection', () => {
     expect(wrapper.props().className).toEqual('results');
   });
 
-  it('renders the correct type and number of children', () => {
+  it('renders the correct number of children', () => {
     expect((wrapper.props().children.length)).toEqual(2);
   })
 });
