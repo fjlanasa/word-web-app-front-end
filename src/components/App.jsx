@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Link, IndexLink } from 'react-router';
+import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
