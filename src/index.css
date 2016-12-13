@@ -72,6 +72,14 @@ div {
   justify-content: space-between;
 }
 
+.word {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
 .result-content {
   width: 80%;
 }
@@ -91,10 +99,6 @@ hr {
   width: 65%;
 }
 
-.word {
-  font-weight: 100;
-  text-transform: capitalize;
-}
 
 span.type {
   font-weight: bold;
@@ -114,16 +118,6 @@ span.type {
 .submit {
   margin-left: -9999px;
 }
-
-/*div.result:hover button.save{
-  display: inline;
-  height: 30px;
-  width: 60px;
-  background-color: #68DF91;
-  color: white;
-  border: none;
-  border-radius: 2px;
-}*/
 
 form {
   width: 100%;
