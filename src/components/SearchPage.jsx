@@ -10,7 +10,7 @@ class SearchPage extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    let word = this.refs.word.value.toLowerCase();
+    let word = this.refs.word.value.toLowerCase().trim();
     let url = `http://word-web-app-backend.herokuapp.com/${word}`
     $.ajax({
       url: url,
@@ -22,7 +22,7 @@ class SearchPage extends Component {
 
   render() {
     let noResultsText = null;
-    if(this.props.searchResults.length === 0 && this.props.searchTerm.trim() != ''){
+    if(this.props.searchResults.length == 0 && this.props.searchTerm != ''){
       noResultsText = <div className="no-results">
                         Sorry, that search produced no results
                       </div>;
