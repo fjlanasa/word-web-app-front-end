@@ -11,7 +11,7 @@ class SearchPage extends Component {
   handleSubmit(event){
     event.preventDefault();
     let word = this.refs.word.value.toLowerCase();
-    let url = `word-web-app-backend.herokuapp/${word}`
+    let url = `http://word-web-app-backend.herokuapp.com/${word}`
     $.ajax({
       url: url,
       contentType: 'application/json'
