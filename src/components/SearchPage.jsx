@@ -21,12 +21,17 @@ class SearchPage extends Component {
   }
 
   render() {
+    let noResultsText = null;
+    if(this.props.searchResults.length === 0 && this.props.searchTerm.trim() != ''){
+      noResultsText = <div>Sorry, that search produced no results</div>;
+    }
     return (
       <div className='search'>
         <form ref='searchForm' id='search-form' onSubmit={this.handleSubmit}>
           <input type='text' ref='word' defaultValue={this.props.searchTerm} placeholder='Search for Word'/>
           <input className='save submit' type='submit'/>
         </form>
+        {noResultsText}
         <SearchResultsCollection {...this.props}/>
       </div>
     );
