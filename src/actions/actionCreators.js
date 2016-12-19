@@ -1,4 +1,3 @@
-//search
 export function search(word, body) {
   return {
     type: 'SEARCH',

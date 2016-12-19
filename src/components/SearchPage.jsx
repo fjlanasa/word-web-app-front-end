@@ -5,19 +5,26 @@ import $ from 'jquery';
 class SearchPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      loading: false
-    }
+    this.state = { loading: false }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event){
     event.preventDefault();
-    if(this.props.searchTerm === ''){
+    if (this.props.searchTerm === '') {
       this.setState({loading: true});
     }
-    let word = this.refs.word.value.toLowerCase().trim();
+    let word = this.word.value.toLowerCase().trim();
+    // This url should be something that can be generated dynamically on
+    // starting up the app.  Maybe via an env variable.  B/C I ran the local
+    // backend and it's not even using it.  Wouldn't want to be hitting heroku
+    // when developing.
     let url = `http://word-web-app-backend.herokuapp.com/${word}`
+    // I'm guessing you guys were just taught to use JQuery for ajax but I
+    // definitely wouldn't pull in such a large library just to make 1 ajax
+    // call.
+    //
+    // Instead, I'd look for something like axios or fetch with a polyfill.
     $.ajax({
       url: url,
       contentType: 'application/json'
@@ -28,25 +35,21 @@ class SearchPage extends Component {
   }
 
   render() {
-    let noResultsText = null;
-    let loadingAnimation = null;
-    if(this.state.loading === true) {
-      loadingAnimation = <div className='loading' />
-    }
+    const { searchResults, searchTerm } = this.props;
+    const noResultsProduced = searchResults.length === 0 && searchTerm !== '';
 
-    if(this.props.searchResults.length === 0 && this.props.searchTerm !== ''){
-      noResultsText = <div className="no-results">
-                        Sorry, that search produced no results
-                      </div>;
-    }
     return (
       <div className='search'>
         <form ref='searchForm' id='search-form' onSubmit={this.handleSubmit}>
-          <input type='text' ref='word' defaultValue={this.props.searchTerm} placeholder='Search for Word'/>
+          {/* can use call back refs to clean this up */}
+          <input type='text' ref={i => this.word = i} defaultValue={searchTerm} placeholder='Search for Word'/>
           <input className='save submit' type='submit'/>
         </form>
-        {loadingAnimation}
-        {noResultsText}
+        {this.state.loading && <div className='loading' />}
+        {noResultsProduced && 
+          <div className="no-results">
+            Sorry, that serach produced no results
+          </div>}
         <SearchResultsCollection {...this.props} />
       </div>
     );

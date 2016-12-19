@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
 import { browserHistory } from 'react-router';
 
+// for just one handle cb I usually just inline with arrow funcs to save the
+// constructor
 class SearchResult extends Component {
-  constructor(props){
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(){
+  handleClick = () => {
     this.props.save(this.props.searchTerm, this.props.result);
     browserHistory.push('/saved');
   }
+
   render() {
     return(
       <div className='result'>

@@ -1,27 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
-class NavLink extends Component {
-  constructor(props, context){
-    super(props);
-  }
-  render() {
-    let isActive = this.context.router.isActive(this.props.to, true);
-    let className = isActive ? 'active saved-link': 'saved-link';
+// Don't need to call constructor if it's not being used.
+// Can take advantage of react routers link's activeClassName.
+// Avoid interacting with context if possible. 
 
-    return (
-      <div className={className}>
-        <Link {...this.props}>
-          {this.props.children}
-        </Link>
-      </div>
-    );
-  };
-}
-
-NavLink.contextTypes = {
-    router: React.PropTypes.object
-};
-
+const NavLink = ({children, ...rest}) => (
+  <Link {...rest} className="saved-link" activeClassName="active">
+    {children}
+  </Link>
+)
 
 export default NavLink;

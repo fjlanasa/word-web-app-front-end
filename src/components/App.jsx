@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
 import NavLink from './NavLink';
@@ -31,11 +30,10 @@ let mapStateToProps = (state) => {
   }
 }
 
-let mapDispatchToProps = (dispatch) => {
-  return  bindActionCreators(actionCreators, dispatch);
-}
-
+// React Redux actually gives you a bit of a shortcut now that you can take
+// advantage of.  If you're not changing the names of your actions you can just
+// pass in a JS object and it will bind them for you automatically.
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  actionCreators,
 )(App);
