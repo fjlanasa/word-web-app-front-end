@@ -1,4 +1,3 @@
-//search
 export function search(word, body) {
   return {
     type: 'SEARCH',
@@ -6,7 +5,7 @@ export function search(word, body) {
     body
   }
 }
-//save search
+
 export function save(word, definition) {
   return {
     type: 'SAVE',
